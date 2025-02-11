@@ -1,8 +1,16 @@
+import Signup from "./auth/Signup"
+import { useAuth } from "./contexts/authContext";
+
 function App() {
+  const { currentUser } = useAuth();
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <>
+      { currentUser ?
+      <h1>Home Page</h1>
+      :
+      <Signup />
+      }
+    </>
   )
 }
 

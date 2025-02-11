@@ -10,7 +10,7 @@ import {
 } from "firebase/auth";
 import { AUTH_ACTIONS } from "../../constants";
 
-const AuthContext = createContext();
+const AuthContext = createContext(null);
 
 export function useAuth() {
   return useContext(AuthContext);
